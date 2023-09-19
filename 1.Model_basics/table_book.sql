@@ -1,4 +1,4 @@
-CREATE TABLE(
+CREATE TABLE book(
     book_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(50),
     author VARCHAR(30),
