@@ -48,6 +48,9 @@ SELECT title, price * amount AS total
 FROM book
 WHERE price * amount > 4000;
 
+SELECT author, title, price
+FROM book
+WHERE amount < 10;
 
 
 
