@@ -68,3 +68,7 @@ SELECT title, amount
 FROM book
 WHERE amount BETWEEN 5 AND 14;
 
+SELECT title, amount
+FROM book
+WHERE author IN ('Булгаков М.А.', 'Достоевский Ф.М.');
+
