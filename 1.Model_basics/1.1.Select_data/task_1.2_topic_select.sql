@@ -40,6 +40,13 @@ SELECT author, title,
     IF(author = "Есенин С.А.", price+price*0.05, price)),2) AS new_price
 FROM book;
 
+SELECT title, price
+FROM book
+WHERE price < 600;
+
+SELECT title, price * amount AS total
+FROM book
+WHERE price * amount > 4000;
 
 
 
