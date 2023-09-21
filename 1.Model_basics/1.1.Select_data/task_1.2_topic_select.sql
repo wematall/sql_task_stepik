@@ -63,3 +63,8 @@ WHERE (author = 'Булгаков М.А.' OR author = 'Есенин С.А.') AND
 SELECT title, author, price, amount
 FROM book
 WHERE (price < 500 OR price > 600) AND (amount * price) > 5000;
+
+SELECT title, amount
+FROM book
+WHERE amount BETWEEN 5 AND 14;
+
