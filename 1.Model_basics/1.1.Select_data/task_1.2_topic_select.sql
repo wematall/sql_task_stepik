@@ -18,3 +18,6 @@ SELECT title,
     ROUND(price/(1+18/100),2) AS price_tax
 FROM book;
 
+SELECT title, author, amount,
+    ROUND(price - (price*0.3), 2) AS new_price
+FROM book;
