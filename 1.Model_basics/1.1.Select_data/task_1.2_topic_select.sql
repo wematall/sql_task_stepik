@@ -26,3 +26,9 @@ SELECT title, amount, price,
     IF(amount<4, price*0.5, price*0.7) AS sale
 FROM book;
 
+SELECT title, amount, price,
+    ROUND(IF(amount < 4, price*0.5, price*0.7), 2) AS sale
+FROM book;
+
+
+
