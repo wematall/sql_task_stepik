@@ -21,3 +21,8 @@ FROM book;
 SELECT title, author, amount,
     ROUND(price - (price*0.3), 2) AS new_price
 FROM book;
+
+SELECT title, amount, price,
+    IF(amount<4, price*0.5, price*0.7) AS sale
+FROM book;
+
