@@ -35,6 +35,11 @@ SELECT title, amount, price,
     IF(amount<4, 'скидка 50%', IF(amount<11, 'скидка 30%', 'скидка 10%')) AS Ваша_скидка
 FROM book;
 
+SELECT author, title,
+    ROUND(IF(author = "Булгаков М.А.", price+price*0.1,
+    IF(author = "Есенин С.А.", price+price*0.05, price)),2) AS new_price
+FROM book;
+
 
 
 
