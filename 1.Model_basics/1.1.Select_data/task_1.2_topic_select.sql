@@ -153,4 +153,8 @@ WHERE (author LIKE "%.С.%"
     (title NOT LIKE " " OR title NOT LIKE "_")
 ORDER BY title ASC;
 
+-- simple task using order by price asc
+SELECT title, author, price
+FROM book
+ORDER BY price ASC;
 
