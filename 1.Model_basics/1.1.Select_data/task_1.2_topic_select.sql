@@ -136,4 +136,21 @@ SELECT title
 FROM book
 WHERE title NOT LIKE "% %";
 
+-- task
+-- Вывести название и автора тех книг, 
+-- название которых состоит из двух и более слов, 
+-- а инициалы автора содержат букву «С»
+-- Информацию отсортировать 
+-- по названию книги в алфавитном порядке
+
+SELECT title, author
+FROM book
+WHERE (author LIKE "%.С.%"
+    OR author LIKE "%С.%")
+    AND
+    title LIKE "% %"
+    AND 
+    (title NOT LIKE " " OR title NOT LIKE "_")
+ORDER BY title ASC;
+
 
