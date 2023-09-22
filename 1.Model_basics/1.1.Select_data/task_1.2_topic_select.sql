@@ -123,4 +123,12 @@ SELECT title
 FROM book
 WHERE title LIKE "_____%";
 
+-- Вывести названия книг, которые содержат букву "и" как отдельное слово
+SELECT title
+FROM book
+WHERE title LIKE "и"
+    OR title LIKE "_% и"
+    OR title LIKE "и _%"
+    OR title LIKE "_% и _%";
+
 
