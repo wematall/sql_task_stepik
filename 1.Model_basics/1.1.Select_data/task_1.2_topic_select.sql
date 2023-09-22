@@ -76,3 +76,28 @@ SELECT title, author
 FROM book
 WHERE amount IN (2, 3, 5, 7) AND price BETWEEN 540.50 AND 800;
 
+SELECT title, author, price
+FROM book
+ORDER BY title;
+
+-- the same result
+SELECT title, author, price
+FROM book
+ORDER BY 1;
+
+-- order by and conditions
+SELECT author, title, amount AS Количество
+FROM book
+WHERE price < 750
+ORDER BY author, amount DESC;
+
+SELECT author, title, amount AS Количество
+FROM book
+WHERE price < 750
+ORDER BY author, Количество DESC;
+
+SELECT author, title, amount AS Количество
+FROM book
+WHERE price < 750
+ORDER BY 1, 3 DESC;
+
