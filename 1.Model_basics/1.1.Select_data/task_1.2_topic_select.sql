@@ -106,3 +106,55 @@ SELECT author, title
 FROM book
 WHERE amount BETWEEN 2 AND 14
 ORDER BY author DESC, title ASC;
+
+-- operator LIKE
+-- Вывести названия книг, начинающихся с буквы «Б».
+SELECT title
+FROM book
+WHERE title LIKE 'Б%';
+
+-- Вывести название книг, состоящих ровно из 5 букв.
+SELECT title
+FROM book
+WHERE title LIKE "_____";
+
+-- Вывести книги, название которых длиннее 5 символов:
+SELECT title
+FROM book
+WHERE title LIKE "_____%";
+
+-- Вывести названия книг, которые содержат букву "и" как отдельное слово
+SELECT title
+FROM book
+WHERE title LIKE "и"
+    OR title LIKE "_% и"
+    OR title LIKE "и _%"
+    OR title LIKE "_% и _%";
+
+-- Вывести названия книг, которые состоят ровно из одного слова
+SELECT title
+FROM book
+WHERE title NOT LIKE "% %";
+
+-- task
+-- Вывести название и автора тех книг, 
+-- название которых состоит из двух и более слов, 
+-- а инициалы автора содержат букву «С»
+-- Информацию отсортировать 
+-- по названию книги в алфавитном порядке
+
+SELECT title, author
+FROM book
+WHERE (author LIKE "%.С.%"
+    OR author LIKE "%С.%")
+    AND
+    title LIKE "% %"
+    AND 
+    (title NOT LIKE " " OR title NOT LIKE "_")
+ORDER BY title ASC;
+
+-- simple task using order by price asc
+SELECT title, author, price
+FROM book
+ORDER BY price ASC;
+
