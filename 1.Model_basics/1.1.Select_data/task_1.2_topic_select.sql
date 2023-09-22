@@ -131,4 +131,9 @@ WHERE title LIKE "и"
     OR title LIKE "и _%"
     OR title LIKE "_% и _%";
 
+-- Вывести названия книг, которые состоят ровно из одного слова
+SELECT title
+FROM book
+WHERE title NOT LIKE "% %";
+
 
