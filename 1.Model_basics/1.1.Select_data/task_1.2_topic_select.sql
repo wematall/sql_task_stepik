@@ -106,3 +106,12 @@ SELECT author, title
 FROM book
 WHERE amount BETWEEN 2 AND 14
 ORDER BY author DESC, title ASC;
+
+-- operator LIKE
+-- Вывести названия книг, начинающихся с буквы «Б».
+SELECT title
+FROM book
+WHERE title LIKE 'Б%';
+
+
+
