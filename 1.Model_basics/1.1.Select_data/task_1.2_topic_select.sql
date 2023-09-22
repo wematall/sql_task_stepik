@@ -101,3 +101,8 @@ FROM book
 WHERE price < 750
 ORDER BY 1, 3 DESC;
 
+-- task
+SELECT author, title
+FROM book
+WHERE amount BETWEEN 2 AND 14
+ORDER BY author DESC, title ASC;
