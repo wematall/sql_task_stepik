@@ -118,4 +118,9 @@ SELECT title
 FROM book
 WHERE title LIKE "_____";
 
+-- Вывести книги, название которых длиннее 5 символов:
+SELECT title
+FROM book
+WHERE title LIKE "_____%";
+
 
