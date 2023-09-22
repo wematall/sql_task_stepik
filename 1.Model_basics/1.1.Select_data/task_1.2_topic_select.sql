@@ -113,5 +113,9 @@ SELECT title
 FROM book
 WHERE title LIKE 'Б%';
 
+-- Вывести название книг, состоящих ровно из 5 букв.
+SELECT title
+FROM book
+WHERE title LIKE "_____";
 
 
