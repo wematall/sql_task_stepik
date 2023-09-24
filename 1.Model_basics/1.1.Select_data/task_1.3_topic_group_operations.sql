@@ -15,3 +15,8 @@ SELECT amount
 FROM book
 GROUP BY amount;
 
+-- sum() count() example
+SELECT author, sum(amount), count(amount)
+FROM book
+GROUP BY author;
+
