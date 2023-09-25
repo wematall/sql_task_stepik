@@ -53,3 +53,14 @@ SELECT author, SUM(price * amount) AS Стоимость
 FROM book
 GROUP BY author;
 
+-- Найти среднюю цену книг каждого автора.
+SELECT author, ROUND(AVG(price),2) AS Средняя_цена
+FROM book
+GROUP BY author;
+
+-- task
+SELECT author, ROUND(SUM(price*amount),2) AS Стоимость,
+    ROUND(SUM(price*amount)*0.18/(1+0.18), 2) AS НДС,
+    ROUND(SUM(price*amount)/(1+0.18), 2) AS Стоимость_без_НДС
+FROM book
+GROUP BY author;
