@@ -47,3 +47,9 @@ SELECT author,
     AVG(price) AS Средняя_цена
 FROM book
 GROUP BY author;
+
+-- Вывести суммарную стоимость книг каждого автора.
+SELECT author, SUM(price * amount) AS Стоимость
+FROM book
+GROUP BY author;
+
