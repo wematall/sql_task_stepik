@@ -87,3 +87,15 @@ SELECT MIN(price) AS Минимальная_цена,
     MAX(price) AS Максимальная_цена,
     ROUND(AVG(price),2) AS Средняя_цена
 FROM book;
+
+-- Найти минимальную и максимальную цену книг всех авторов, 
+-- общая стоимость книг которых больше 5000.
+
+SELECT author,
+    MIN(price) AS Минимальная_цена,
+    MAX(price) AS Максимальная_цена
+FROM book
+GROUP BY author
+HAVING SUM(price * amount) > 5000
+ORDER BY Минимальная_цена DESC;
+
