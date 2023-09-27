@@ -109,3 +109,14 @@ SELECT
     ROUND(SUM(price * amount),2) AS Стоимость
 FROM book
 WHERE amount BETWEEN 5 AND 14;
+
+-- Вывести максимальную и минимальную цену книг 
+-- каждого автора, кроме Есенина, 
+-- количество экземпляров книг которого больше 10.
+SELECT author,
+    MIN(price) AS Минимальная_цена,
+    MAX(price) AS Максимальная_цена
+FROM book
+WHERE author <> 'Есенин С.А.'
+GROUP BY author
+HAVING SUM(amount) > 10;
